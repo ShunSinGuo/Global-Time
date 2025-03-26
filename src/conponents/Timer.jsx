@@ -38,15 +38,15 @@ function Timer({ timezone }) {
         }
 
         const json = await response.json();
-        console.log(json)
+        // console.log(json);
         setTimeData(json);
         const apiTime = new Date(`${json.date} ${json.hour}:${json.minute}:${json.second}`);
-        console.log('API Time:', apiTime);
+        // console.log('API Time:', apiTime);
         setTime(apiTime);
         setCity(json.timezone);
         setDate(json.date);
         setDay(json.day_of_week);
-        console.log(json.date)
+        // console.log(json.date);
       } catch (err) {
         console.error('API Error:', err.message);
         setError(err.message);
